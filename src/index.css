@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Theme */
+:root {
+  --brand: #7C3AED; /* violet-600 */
+  --accent: #06B6D4; /* cyan-500 */
+}
+
+/* Aurora background */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: -20% -20% auto -20%;
+  z-index: -1;
+  background: radial-gradient(600px circle at 20% 20%, rgba(124,58,237,0.18), transparent 40%),
+              radial-gradient(500px circle at 80% 10%, rgba(6,182,212,0.18), transparent 40%),
+              radial-gradient(700px circle at 50% 90%, rgba(244,63,94,0.14), transparent 45%);
+  filter: blur(40px);
+}
+
+/******** Utilities ********/
+.container-3xl {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-glow;
+}
+.neon-text {
+  text-shadow: 0 0 10px rgba(124, 58, 237, 0.55), 0 0 20px rgba(6, 182, 212, 0.35);
+}
+.tag {
+  @apply inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium
+         bg-gradient-to-r from-white/10 to-white/5 border border-white/10 hover:border-white/20
+         transition-shadow shadow-[0_0_0_rgba(0,0,0,0)] hover:shadow-[0_0_24px_rgba(124,58,237,0.35)]
+         backdrop-blur;
+}
+.card {
+  @apply glass rounded-2xl p-6 hover:translate-y-[-2px] hover:shadow-2xl transition-transform duration-300;
+}
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-violet-600 to-cyan-500
+         px-5 py-2.5 font-semibold text-white shadow-glow hover:opacity-95 active:opacity-90;
+}
+.btn-ghost {
+  @apply inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2.5
+         hover:bg-white/10;
+}
+
+/* Fancy underline for section headings */
+.heading {
+  @apply text-2xl sm:text-3xl md:text-4xl font-extrabold tracking-tight;
+}
+.heading span {
+  background: linear-gradient(90deg, var(--brand), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Grid backdrop overlay */
+.backdrop-grid {
+  background-size: 24px 24px;
+  mask-image: radial-gradient(circle at 50% 50%, black 20%, transparent 70%);
+}
