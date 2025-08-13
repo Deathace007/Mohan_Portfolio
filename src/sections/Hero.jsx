@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { FiMail, FiMapPin, FiLinkedin, FiFileText } from 'react-icons/fi'
 import resume from '../../public/MohanBorle_AI-ML_Resume.pdf'
+import profile_image from '../../public/profile_img.jpg'
 import { profile } from '../data/resume.js'
 
 export default function Hero() {
@@ -66,7 +67,7 @@ export default function Hero() {
           >
             <div className="aspect-square rounded-3xl glass p-1">
               <div className="h-full w-full rounded-[22px] bg-cover bg-center" style={{
-                backgroundImage: 'url(https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop)',
+                backgroundImage: `url(${profile_image.src})`,
               }} />
             </div>
             <div className="pointer-events-none absolute -bottom-6 -right-6 h-24 w-24 rounded-full border border-white/20 bg-white/10 backdrop-blur animate-float-slow" />
