@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { FiMail, FiMapPin, FiLinkedin, FiFileText } from 'react-icons/fi'
 import resume from '../../public/MohanBorle_AI-ML_Resume.pdf'
-import profile_image from '../data/profile_img.jpg'
+import profile_image from '../data/profile_img.png'
 import { profile } from '../data/resume.js'
 
 export default function Hero() {
