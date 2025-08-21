@@ -1,3 +1,4 @@
+.gitignore
 # Logs
 logs
 *.log
@@ -20,12 +21,9 @@ build/
 
 # Local environment
 *.local
-.env
 .env.*       # handles .env.development, .env.production etc.
 .venv/
-venv/
-env/
-backend/.env
+*.env
 
 # IDE / Editor
 .vscode/*
